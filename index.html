@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CashFlix</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .card{
+      width:90%;
+      max-width:380px;
+      background:#181818;
+      border:1px solid #2a2a2a;
+      border-radius:22px;
+      padding:40px 25px;
+      text-align:center;
+      box-shadow:0 0 30px rgba(255,255,255,0.05);
+    }
+
+    .logo{
+      font-size:34px;
+      font-weight:700;
+      margin-bottom:8px;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:#f5c542;
+    }
+
+    .status{
+      display:inline-block;
+      background:#2a2a2a;
+      color:#f5c542;
+      padding:8px 18px;
+      border-radius:50px;
+      font-size:14px;
+      margin-top:15px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:#bdbdbd;
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .btn{
+      margin-top:28px;
+      display:inline-block;
+      background:#f5c542;
+      color:black;
+      text-decoration:none;
+      padding:12px 24px;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="logo">Cash<span>Flix</span></div>
+
+    <div class="status">Temporarily Closed</div>
+
+    <h2>Offer Unavailable</h2>
+
+    <p>
+      This offer is currently unavailable.<br>
+      Please try again later.
+    </p>
+
+    <a href="https://t.me/yourchannel" class="btn">
+      Join Telegram
+    </a>
+
+  </div>
+
+</body>
+</html>
