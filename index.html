@@ -105,7 +105,7 @@ function handleSubmit() {
   fetch('https://cash-flix-dytv.onrender.com/click', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ click_id: phone, offer_name: OFFER_NAME })
+    body: JSON.stringify({ click_id: phone, offer_name: StoryMax})
   }).catch(() => {});
 
   const link = AFFILIATE_LINK + '&sub1=' + phone;
