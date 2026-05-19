@@ -162,7 +162,7 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 
 <script>
 const OFFER_NAME = 'InCred';
-const AFFILIATE_LINK = 'https://track.inrflash.com/click/?offer_id=65&pub=114';
+const AFFILIATE_LINK = 'https://publisher.apnacashy.site/c/?o=31&a=15';
 
 function handleSubmit() {
   const phone = document.getElementById('phoneInput').value.trim();
@@ -184,7 +184,7 @@ function handleSubmit() {
     body: JSON.stringify({ click_id: phone, offer_name: OFFER_NAME})
   }).catch(() => {});
 
-  const link = AFFILIATE_LINK + '&affsub=' + phone;
+  const link = AFFILIATE_LINK + '&aff_click_id=' + phone;
   
   // Show toast
   const toast = document.getElementById('toastMessage');
