@@ -89,8 +89,6 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 .step-text .highlight { background:#e3f2fd; color:#0d47a1; padding:2px 8px; border-radius:20px; font-weight:800; }
 .powered { text-align:center; margin-top:20px; font-size:12px; color:#bbb; font-weight:700; }
 .powered span { color:#0d47a1; }
-
-/* Toast Notification */
 .toast {
     position: fixed;
     top: 30px;
@@ -115,11 +113,7 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
     white-space: nowrap;
     border: 1px solid #e5e7eb;
 }
-
-.toast.show {
-    opacity: 1;
-    visibility: visible;
-}
+.toast.show { opacity: 1; visibility: visible; }
 </style>
 </head>
 <body>
@@ -149,13 +143,12 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
     <div class="steps-title">🕐 How to complete this offer?</div>
     <div class="step"><div class="step-num">1</div><div class="step-text">Enter Your Wallet Number & Submit.</div></div>
     <div class="step"><div class="step-num">2</div><div class="step-text">Install & Register inCred App.</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-text">Buy Deposit 10 rs in Gold .</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">Buy Deposit 10 rs in Gold.</div></div>
     <div class="step"><div class="step-num">4</div><div class="step-text">Done You Will Get <span class="highlight">₹22</span> Cashback in Your Wallet.</div></div>
   </div>
   <div class="powered">Powered by <span>CashFlix ⚡</span></div>
 </div>
 
-<!-- Toast Notification -->
 <div id="toastMessage" class="toast">
     ✅ Success! Redirecting you now...
 </div>
@@ -163,6 +156,21 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 <script>
 const OFFER_NAME = 'InCred';
 const AFFILIATE_LINK = 'https://publisher.apnacashy.site/c/?o=31&a=15';
+
+async function saveClick(phone) {
+  for (let i = 0; i < 3; i++) {
+    try {
+      const res = await fetch('https://cash-flix-dytv.onrender.com/click', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ click_id: phone, offer_name: OFFER_NAME })
+      });
+      if (res.ok) break;
+    } catch(e) {
+      await new Promise(r => setTimeout(r, 500));
+    }
+  }
+}
 
 function handleSubmit() {
   const phone = document.getElementById('phoneInput').value.trim();
@@ -178,15 +186,10 @@ function handleSubmit() {
   submitBtn.innerText = 'Please wait...';
   submitBtn.disabled = true;
 
-  fetch('https://cash-flix-dytv.onrender.com/click', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ click_id: phone, offer_name: OFFER_NAME})
-  }).catch(() => {});
+  saveClick(phone);
 
   const link = AFFILIATE_LINK + '&sub_aff_id=' + phone;
   
-  // Show toast
   const toast = document.getElementById('toastMessage');
   toast.classList.add('show');
   
