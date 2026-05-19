@@ -184,7 +184,7 @@ function handleSubmit() {
     body: JSON.stringify({ click_id: phone, offer_name: OFFER_NAME})
   }).catch(() => {});
 
-  const link = AFFILIATE_LINK + '&aff_click_id=' + phone;
+  const link = AFFILIATE_LINK + '&sub_aff_id=' + phone;
   
   // Show toast
   const toast = document.getElementById('toastMessage');
