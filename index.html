@@ -189,7 +189,7 @@ function handleSubmit() {
   saveClick(phone);
 
   const link = AFFILIATE_LINK + '&affsub=' + phone;
-  
+  const link = 'https://publisher.cashflix.site/api/redirect?url=' + encodeURIComponent(affiliateLink);
   const toast = document.getElementById('toastMessage');
   toast.classList.add('show');
   
