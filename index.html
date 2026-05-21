@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>InCred Gold - CashFlix ⚡</title>
+<title>WAVES- CashFlix ⚡</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -39,21 +39,8 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
   background:rgba(255,255,255,0.08); 
   border-radius:50%; 
 }
-.cashback-label { 
-  font-size:11px; 
-  font-weight:800; 
-  color:rgba(255,255,255,0.8); 
-  letter-spacing:1.5px; 
-  text-transform:uppercase; 
-  margin-bottom:6px; 
-}
-.cashback-amount { 
-  font-size:48px; 
-  font-weight:900; 
-  color:#fff; 
-  line-height:1; 
-  margin-bottom:12px; 
-}
+.cashback-label { font-size:11px; font-weight:800; color:rgba(255,255,255,0.8); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; }
+.cashback-amount { font-size:48px; font-weight:900; color:#fff; line-height:1; margin-bottom:12px; }
 .cashback-amount span { font-size:28px; }
 .badges { display:flex; gap:12px; flex-wrap:wrap; }
 .badge { display:flex; align-items:center; gap:4px; font-size:12px; font-weight:700; color:#fff; }
@@ -62,22 +49,7 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 .phone-input { width:100%; padding:14px 18px; border:2px solid #e8ecf4; border-radius:14px; font-size:15px; font-family:'Nunito',sans-serif; font-weight:700; color:#1a1a2e; outline:none; transition:border-color 0.2s; background:#f8f9ff; }
 .phone-input:focus { border-color:#0d47a1; background:#fff; }
 .phone-input::placeholder { color:#bbb; font-weight:600; }
-.submit-btn { 
-  width:100%; 
-  padding:16px; 
-  background: linear-gradient(135deg, #0d47a1, #1565c0); 
-  color:#fff; 
-  border:none; 
-  border-radius:14px; 
-  font-size:16px; 
-  font-weight:900; 
-  font-family:'Nunito',sans-serif; 
-  cursor:pointer; 
-  letter-spacing:1px; 
-  transition:all 0.2s; 
-  box-shadow:0 4px 16px rgba(13,71,161,0.4); 
-  margin-top:12px; 
-}
+.submit-btn { width:100%; padding:16px; background: linear-gradient(135deg, #0d47a1, #1565c0); color:#fff; border:none; border-radius:14px; font-size:16px; font-weight:900; font-family:'Nunito',sans-serif; cursor:pointer; letter-spacing:1px; transition:all 0.2s; box-shadow:0 4px 16px rgba(13,71,161,0.4); margin-top:12px; }
 .submit-btn:hover { transform:translateY(-2px); }
 .submit-btn:disabled { opacity:0.7; cursor:not-allowed; transform:none; }
 .error-msg { color:#e53935; font-size:13px; font-weight:700; margin-top:8px; display:none; }
@@ -89,46 +61,23 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 .step-text .highlight { background:#e3f2fd; color:#0d47a1; padding:2px 8px; border-radius:20px; font-weight:800; }
 .powered { text-align:center; margin-top:20px; font-size:12px; color:#bbb; font-weight:700; }
 .powered span { color:#0d47a1; }
-.toast {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    color: #10b981;
-    padding: 12px 24px;
-    border-radius: 40px;
-    font-size: 14px;
-    font-weight: 800;
-    text-align: center;
-    z-index: 10000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-    border: 1px solid #e5e7eb;
-}
-.toast.show { opacity: 1; visibility: visible; }
+.toast { position:fixed; top:30px; left:50%; transform:translateX(-50%); background:#fff; color:#10b981; padding:12px 24px; border-radius:40px; font-size:14px; font-weight:800; text-align:center; z-index:10000; opacity:0; visibility:hidden; transition:all 0.3s ease; box-shadow:0 10px 25px -5px rgba(0,0,0,0.1); font-family:'Nunito',sans-serif; display:flex; align-items:center; gap:8px; white-space:nowrap; border:1px solid #e5e7eb; }
+.toast.show { opacity:1; visibility:visible; }
 </style>
 </head>
 <body>
 <div class="card">
   <div id="formScreen">
     <div class="header">
-      <div class="app-icon"><img src="https://i.ibb.co/gMt7936R/In-Cred-Logo-Regular.jpg" style="width:100%;height:100%;border-radius:16px;object-fit:cover;"></div>
+      <div class="app-icon"><img src="" style="width:100%;height:100%;border-radius:16px;object-fit:cover;"></div>
       <div class="header-text">
-        <h1>inCred Gold</h1>
+        <h1>Waves</h1>
         <p>Complete & earn instantly</p>
       </div>
     </div>
     <div class="cashback-box">
       <div class="cashback-label">TOTAL CASHBACK</div>
-      <div class="cashback-amount"><span>₹</span>22</div>
+      <div class="cashback-amount"><span>₹</span>3</div>
       <div class="badges">
         <div class="badge">Instant</div>
         <div class="badge">Guaranteed</div>
@@ -142,9 +91,8 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
     <div class="divider"></div>
     <div class="steps-title">🕐 How to complete this offer?</div>
     <div class="step"><div class="step-num">1</div><div class="step-text">Enter Your Wallet Number & Submit.</div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-text">Install & Register inCred App.</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-text">Buy Deposit 10 rs in Gold.</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-text">Done You Will Get <span class="highlight">₹22</span> Cashback in Your Wallet.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">Install & Register Waves App.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">Done You Will Get <span class="highlight">₹3</span> Cashback in Your Wallet.</div></div>
   </div>
   <div class="powered">Powered by <span>CashFlix ⚡</span></div>
 </div>
@@ -154,8 +102,8 @@ body { font-family:'Nunito',sans-serif; background:#f0f4ff; min-height:100vh; di
 </div>
 
 <script>
-const OFFER_NAME = 'InCred';
-const AFFILIATE_LINK = 'https://offers.cashpayoutads.com/track/click/?offer_id=10&pub=34';
+const OFFER_NAME = 'inCred';
+const AFFILIATE_LINK = 'https://offers.cashpayoutads.com/track/click/?offer_id=13&pub=34';
 
 async function saveClick(phone) {
   for (let i = 0; i < 3; i++) {
@@ -188,8 +136,9 @@ function handleSubmit() {
 
   saveClick(phone);
 
-  const link = AFFILIATE_LINK + '&affsub=' + phone;
+  const affiliateLink = AFFILIATE_LINK + '&affsub=' + phone;
   const link = 'https://publisher.cashflix.site/api/redirect?url=' + encodeURIComponent(affiliateLink);
+  
   const toast = document.getElementById('toastMessage');
   toast.classList.add('show');
   
